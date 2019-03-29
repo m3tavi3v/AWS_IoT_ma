@@ -28,7 +28,7 @@ void setup()
 
 void loop() {
   digitalWrite(13, LOW);
-  delay(5000); //3sec
+  delay(5000); //5sec
   temp = dht.readTemperature(); //receive temp from sensor
   Serial.println("Sending temperature: "); 
   if (!wirelessSPI.write(&temp, sizeof(temp))){  //if the send fails let the user know over serial monitor
